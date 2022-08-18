@@ -13,10 +13,16 @@
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 Route::get('/about', function () {
     return view('about');
-});
+})->name('about');
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name('contact');
+Route::get('/signin', function () {
+    return view('signin');
+  })->name('signin');
+  Route::post('/signin/submit', function () {
+      return "all good";
+    });
